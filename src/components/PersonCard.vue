@@ -2,7 +2,7 @@
   <div :class="{ person_card_grid: isGrid, person_card: !isGrid }"
     :style="{ '--card-background': getPersonImage(person) }">
     <div class="gauge_icon_container">
-      <div>
+      <div :class="{ gauge_icon_align: isGrid }"> 
         <div :class="{ gauge_icon_positive: isPositiveOpinions, gauge_icon_negative: !isPositiveOpinions }">
           <img v-if="isPositiveOpinions" src="../assets/img/thumbs-up.svg" />
           <img v-else src="../assets/img/thumbs-down.svg" />

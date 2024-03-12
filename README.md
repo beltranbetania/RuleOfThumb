@@ -1,4 +1,4 @@
-# rule-of-thumb
+# 👍 rule-of-thumb
 
 ## Overview
 
@@ -7,11 +7,11 @@ Rule of Thumb™️ tracks the sentiment of their users on trending and controve
 ### Used tools
 
 - Vue.js 3
-- Realtime Firebase Database to persist and get the data
-- Pinia for State Management 🍍
+- Realtime Firebase Database
+- Pinia mtate management 
 
 
-## Project Setup 🚀
+## Project Setup 
 
 ```sh
 npm install
