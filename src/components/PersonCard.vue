@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import VotingContainer from './VotingContainer.vue'
 import GaugeBar from './GaugeBar.vue'
 import { storeToRefs } from 'pinia'
@@ -35,7 +35,6 @@ const store = usePersonsListStore()
 const { isGrid } = storeToRefs(store)
 
 const props = defineProps({
-  name: 'PersonCard',
   person: {
     type: Object,
     required: true,

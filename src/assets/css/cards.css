@@ -258,6 +258,23 @@
 }
 
 @media (max-width: 550px) {
+
+    .flex_container_list {
+        gap: 1rem;
+        grid-auto-flow: column;
+        overflow-x: scroll;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .flex_container_grid {
+        gap: 1rem;
+        grid-auto-flow: column;
+        overflow-x: scroll;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
     .desk_visible {
         display: none !important;
     }

@@ -3,16 +3,13 @@
         <div class="person_container_header">
             <h1>Previous Rulings</h1>
             <select v-model="selected" class="person_container_selector desk_visible" @change="saveCollectionType($event)">
-                <option v-for="option in options" :value="option.value">
+                <option v-for="option in options" :value="option.value" :key="option.value">
                     {{ option.text }}
                 </option>
             </select>
         </div>
-        <div class="desk_visible" :class="{ flex_container_grid: showGrid }">
-            <PersonCard v-for="person in people" :person="person" />
-        </div>
-        <div class="mobile_visible flex_container_row">
-            <PersonCard v-for="person in people" :person="person" />
+        <div :class="{ flex_container_grid: showGrid, flex_container_list: !showGrid  }">
+            <PersonCard v-for="person in people" :person="person" :key="person.id"/>
         </div>
     </div>
 </template>
