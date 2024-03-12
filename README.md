@@ -8,7 +8,7 @@ Rule of Thumb™️ tracks the sentiment of their users on trending and controve
 
 - Vue.js 3
 - Realtime Firebase Database
-- Pinia mtate management 
+- Pinia state management 
 
 
 ## Project Setup 
