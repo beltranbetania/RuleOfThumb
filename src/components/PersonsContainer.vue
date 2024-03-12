@@ -11,7 +11,7 @@
         <div class="desk_visible" :class="{ flex_container_grid: showGrid }">
             <PersonCard v-for="person in people" :person="person" />
         </div>
-        <div class="mobile_visible flex_container_carousel">
+        <div class="mobile_visible flex_container_row">
             <PersonCard v-for="person in people" :person="person" />
         </div>
     </div>
