@@ -1,16 +1,17 @@
 # rule-of-thumb
 
-This template should help get you started developing with Vue 3 in Vite.
+## Overview
 
-## Recommended IDE Setup
+Rule of Thumb™️ tracks the sentiment of their users on trending and controversial people from different fields, including politics, business, media and entertainment, etc. 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Used tools
 
-## Customize configuration
+- Vue.js 3
+- Realtime Firebase Database to persist and get the data
+- Pinia for State Management 🍍
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## Project Setup 🚀
 
 ```sh
 npm install
@@ -22,14 +23,3 @@ npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
