@@ -2,7 +2,7 @@
 
 ## Overview
 
-Rule of Thumb™️ tracks the sentiment of their users on trending and controversial people from different fields, including politics, business, media and entertainment, etc. 
+Tracks the sentiment of their users on trending and controversial people from different fields, including politics, business, media and entertainment, etc.
 
 ### Used tools
 
@@ -12,6 +12,12 @@ Rule of Thumb™️ tracks the sentiment of their users on trending and controve
 
 
 ## Project Setup 
+
+### Pre requirements
+
+You need to have Node.js installed, preferably 21.6.2 or higher. 
+
+To setup the project run:
 
 ```sh
 npm install

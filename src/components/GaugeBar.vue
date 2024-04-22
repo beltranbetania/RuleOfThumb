@@ -1,15 +1,15 @@
 <template>
-    <div class="gauge_bar">
-        <div class="gauge_bar_content bg-positive_percent " :style="{ '--gauge-percentage': positiveVotesPercentaje }">
-            <div class="gauge_bar_container_data gauge_bar_container_positive_data">
-                <img class="thumb_bar_icon" src="../assets/img/thumbs-up.svg" />
-                <p class="gauge_bar_text gauge_bar_text_positive"> {{ positiveVotesPercentaje }} </p>
+    <div class="gauge-bar">
+        <div class="gauge-bar__content bg-positive_percent " :style="{ '--gauge-percentage': positiveVotesPercentaje }">
+            <div class="gauge-bar_container_data gauge-bar_container_positive_data">
+                <img class="thumb_bar_icon" src="../assets/img/thumbs-up.svg" alt="Thumb up"/>
+                <p class="gauge-bar__text gauge-bar__text--positive"> {{ positiveVotesPercentaje }} </p>
             </div>
         </div>
-        <div class="gauge_bar_content bg-negative_percent" :style="{ '--gauge-percentage': negativeVotesPercentaje }">
-            <div class="gauge_bar_container_data gauge_bar_container_negative_data">
-                <p class="gauge_bar_text_negative gauge_bar_text">{{ negativeVotesPercentaje }} </p>
-                <img class="thumb_bar_icon" src="../assets/img/thumbs-down.svg" />
+        <div class="gauge-bar__content bg-negative_percent" :style="{ '--gauge-percentage': negativeVotesPercentaje }">
+            <div class="gauge-bar_container_data gauge-bar_container_negative_data">
+                <p class="gauge-bar__text--negative gauge-bar__text">{{ negativeVotesPercentaje }} </p>
+                <img class="thumb_bar_icon" src="../assets/img/thumbs-down.svg" alt="Thumb down"/>
             </div>
         </div>
     </div>

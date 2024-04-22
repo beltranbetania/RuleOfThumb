@@ -1,14 +1,14 @@
 <template>
-    <div class="rulings_container">
-        <div class="person_container_header">
+    <div class="rulings-container">
+        <div class="rulings-container__header">
             <h1>Previous Rulings</h1>
-            <select v-model="selected" class="person_container_selector desk_visible" @change="saveCollectionType($event)">
-                <option v-for="option in options" :value="option.value" :key="option.value">
+            <select v-model="selected" class="rulings-container__selector desk_visible" @change="saveCollectionType($event)" aria-label="Select an option">
+                <option v-for="option in options" :value="option.value" :key="option.value" >
                     {{ option.text }}
                 </option>
             </select>
         </div>
-        <div :class="{ flex_container_grid: showGrid, flex_container_list: !showGrid  }">
+        <div :class="{ 'flex-container--grid': showGrid, 'flex-container--list': !showGrid  }">
             <PersonCard v-for="person in people" :person="person" :key="person.id"/>
         </div>
     </div>

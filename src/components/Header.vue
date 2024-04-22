@@ -2,7 +2,7 @@
      <nav class="nav" role="navigation">
         <div class="max-centered">
             <h1 class="nav__logo">Rule of thumb.</h1>
-            <button class="nav__hamburger icon-button" alt="Open Menu">
+            <button class="nav__hamburger icon-button" alt="Open Menu" aria-label="Open Menu">
                 <svg width="25" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h25v4H0V0zm0 8h25v4H0V8zm0 8h25v4H0v-4z" fill="#FFF" fill-rule="nonzero"/></svg>
             </button>
             <ul class="nav__links">
@@ -41,7 +41,7 @@
                         down) or a true pedophile punishing pontiff? (thumbs up)
                     </p>
                     <p class="featured-card__more-info">
-                        <a href="http://wikipedia.com">
+                        <a href="http://wikipedia.com" aria-label="More info">
                             <svg class="featured-card__more-info-icon" preserveAspectRatio
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 18">
                                 <path

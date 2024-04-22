@@ -1,15 +1,15 @@
 <template>
-  <p class="eyebrow_text">{{ voteEyebrow }}</p>
-  <div class="person_button-card">
-    <button class="up_voting_button" :class="{ up_voting_button_selected: vote == ButtonActions.POSITIVE_VOTE }"
+  <p class="voting-container__eyebrow-text">{{ voteEyebrow }}</p>
+  <div class="voting-container__button-row">
+    <button class="voting-container__button-up" :class="{ 'voting-container__button-up--selected': vote == ButtonActions.POSITIVE_VOTE }"
       @click="setVoteType(ButtonActions.POSITIVE_VOTE)">
-      <img class="thumb_voting_icon" src="../assets/img/thumbs-up.svg" aria-label="thumbs up" />
+      <img class="voting-container__icon" src="../assets/img/thumbs-up.svg" aria-label="Vote positive" />
     </button>
-    <button class="down_voting_button" :class="{ down_voting_button_selected: vote == ButtonActions.NEGATIVE_VOTE }"
+    <button class="voting-container__button-down" :class="{ 'voting-container__button-down--selected': vote == ButtonActions.NEGATIVE_VOTE }"
       @click="setVoteType(ButtonActions.NEGATIVE_VOTE)">
-      <img class="thumb_voting_icon" src="../assets/img/thumbs-down.svg" aria-label="thumbs up" />
+      <img class="voting-container__icon" src="../assets/img/thumbs-down.svg" aria-label="Vote negative" />
     </button>
-    <button class="person_vote_now-button" @click="voteNow()" :disabled='vote == ButtonActions.DEFAULT'>
+    <button class="voting-container__button-vote" @click="voteNow()" :disabled='vote == ButtonActions.DEFAULT' aria-label= "Send your vote">
       {{ voteText }}
     </button>
   </div>

@@ -1,37 +1,37 @@
-.person_container_header {
+.rulings-container__header>h1 {
+    margin: 0;
+    font-weight: lighter;
+}
+
+.rulings-container__header {
     justify-content: space-between;
     display: flex;
     padding: 1.5rem 0 1.5rem 0;
 }
 
-.person_container_header>h1 {
-    margin: 0;
-    font-weight: lighter;
-}
-
-.person_container_selector {
+.rulings-container__selector {
     border: 2px solid black;
     padding: 0 1rem 0 1rem;
 }
 
-.person_container {
+.person-container--list {
     display: flex;
     padding: 1rem 2rem 0 2rem;
 }
 
-.person_container_grid {
+.person-container--grid {
     padding: 1.5rem 0.5rem 1.5rem 0.2rem;
 }
 
-.person_content {
+.person-content {
     padding-left: 8rem;
 }
 
-.person_content_grid {
+.person-content--grid {
     padding-left: 0;
 }
 
-.person_content_name {
+.person-content__name {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -44,11 +44,11 @@
     font-size: 1.75rem;
 }
 
-.person_content_name_card {
+.person-content__name--card {
     margin-top: 4rem;
 }
 
-.person_content_desc {
+.person-content__desc {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -59,7 +59,7 @@
     font-size: 1rem;
 }
 
-.eyebrow_text {
+.voting-container__eyebrow-text {
     text-align: right;
     margin: 0 0.4rem 0 0;
     color: var(--color-white);
@@ -67,17 +67,17 @@
     font-size: 0.9rem;
 }
 
-.person_button-card {
+.voting-container__button-row {
     padding: 1rem 0 0 1rem;
     display: flex;
 }
 
-.gauge_bar {
+.gauge-bar {
     display: flex;
     display: -ms-flexbox;
 }
 
-.gauge_bar_content {
+.gauge-bar__content {
     color: var(--color-white);
     width: var(--gauge-percentage);
 }
@@ -90,20 +90,20 @@
     background-color: rgba(var(--color-yellow-negative), .8);
 }
 
-.gauge_bar_container_data {
+.gauge-bar_container_data {
     display: flex;
     padding: 1rem;
 }
 
-.gauge_bar_container_positive_data {
+.gauge-bar_container_positive_data {
     justify-content: start;
 }
 
-.gauge_bar_container_negative_data {
+.gauge-bar_container_negative_data {
     justify-content: end;
 }
 
-.thumb_voting_icon {
+.voting-container__icon {
     height: 2.1em;
 }
 
@@ -112,7 +112,7 @@
     margin-top: 0.15rem
 }
 
-.gauge_bar_text {
+.gauge-bar__text {
     font-size: 1.5rem;
     padding-top: 0;
     padding-bottom: 0;
@@ -120,41 +120,45 @@
     margin-bottom: 0
 }
 
-.gauge_bar_text_positive {
+.gauge-bar__text--positive {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
 
-.gauge_bar_text_negative {
+.gauge-bar__text_negative {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
 
-.gauge_icon_container {
+.person__gauge-icon {
     display: flex;
 }
 
-.gauge_icon_positive {
+.person__gauge-icon>img {
+    height: 1rem;
+}
+
+.person__gauge-icon--align {
+    margin-top: 25%;
+}
+
+.person__gauge-icon--positive {
     padding: 0.7rem;
     background-color: rgba(var(--color-green-positive));
 }
 
-.gauge_icon_negative {
+.person__gauge-icon--negative {
     padding: 0.7rem;
     background-color: rgba(var(--color-yellow-negative));
 }
 
-.gauge_icon>img {
-    height: 1rem;
-}
-
-.person_card {
+.person__card--list {
     margin-top: 1rem;
     background-image: var(--img-background);
     background-size: cover;
 }
 
-.up_voting_button_selected {
+.voting-container__button-up--selected {
     border: 2px solid !important;
     border-color: white !important;
     background-color: rgba(var(--color-green-positive), .8);
@@ -162,7 +166,7 @@
     margin: 0.2rem;
 }
 
-.up_voting_button {
+.voting-container__button-up {
     background-color: rgba(var(--color-green-positive), .8);
     padding: 0.7rem;
     border: 2px solid;
@@ -170,11 +174,11 @@
     margin: 0.2rem;
 }
 
-.up_voting_button:hover {
+.voting-container__button-up:hover {
     background-color: rgba(var(--color-green-positive), 1);
 }
 
-.down_voting_button {
+.voting-container__button-down {
     background-color: rgba(var(--color-yellow-negative), .8);
     padding: 0.7rem;
     border: 2px solid;
@@ -182,7 +186,7 @@
     margin: 0.2rem;
 }
 
-.down_voting_button_selected {
+.voting-container__button-down--selected {
     border: 2px solid white !important;
     background-color: rgba(var(--color-yellow-negative), .8);
     padding: 0.7rem;
@@ -191,11 +195,11 @@
     margin: 0.2rem;
 }
 
-.down_voting_button:hover {
+.voting-container__button-down:hover {
     background-color: rgba(var(--color-yellow-negative), 1);
 }
 
-.person_vote_now-button {
+.voting-container__button-vote {
     border: 1px solid var(--color-white);
     background: rgba(28, 28, 28, 0.6);
     transition: all .5s ease;
@@ -209,49 +213,37 @@
     margin: 0.2rem;
 }
 
-.flex_container_grid {
+.flex-container--grid {
     gap: 1rem;
     display: grid;
     grid-template-columns: auto auto auto;
 }
 
-.flex_container_row {
-    gap: 1rem;
-    grid-auto-flow: column;
-    overflow-x: scroll;
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
-
-.person_card {
+.person__card--list {
     background-image: var(--card-background);
     background-size: cover, contain;
     background-position: center, left bottom;
     background-repeat: no-repeat, no-repeat;
 }
 
-.person_card_grid {
+.person__card--grid {
     background-image: var(--card-background);
     background-size: cover, contain;
     background-position: center, left bottom;
 }
 
-.gauge_icon_align {
-    margin-top: 25%;
-}
-
 @media all and (max-width: 1200px) {
-    .rulings_container {
+    .rulings-container {
         margin: 1rem;
     }
 
-    .flex_container_grid {
+    .flex-container--grid {
         gap: 1rem;
         display: grid;
         grid-template-columns: auto auto;
     }
 
-    .person_content {
+    .person-content {
         padding-left: 8rem;
         margin-bottom: 0.5rem;
     }
@@ -259,7 +251,7 @@
 
 @media (max-width: 550px) {
 
-    .flex_container_list {
+    .flex-container--list {
         gap: 1rem;
         grid-auto-flow: column;
         overflow-x: scroll;
@@ -267,7 +259,7 @@
         grid-template-columns: auto auto auto;
     }
 
-    .flex_container_grid {
+    .flex-container--grid {
         gap: 1rem;
         grid-auto-flow: column;
         overflow-x: scroll;
@@ -279,24 +271,24 @@
         display: none !important;
     }
 
-    .person_content {
+    .person-content {
         padding-left: 0;
     }
 
-    .person_container {
+    .person-container--list {
         display: block;
         padding: 1.5rem 2rem 1.5rem 0.2rem;
     }
 
-    .thumb_voting_icon {
+    .voting-container__icon {
         height: 1em;
     }
 
-    .gauge_icon_align {
+    .person__gauge-icon--align {
         margin-top: 25%;
     }
 
-    .person_content_name {
+    .person-content__name {
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
@@ -315,13 +307,13 @@
         display: none !important;
     }
 
-    .person_card {
+    .person__card--list {
         background-size: cover, contain;
         background-position: center, left bottom;
         background-image: linear-gradient(to right, rgba(77, 77, 75, 0) 1%, #939493 15%, #575757 50%, rgba(6, 6, 6, 0.4) 100%), var(--card-background);
     }
 
-    .person_button-card {
+    .voting-container__button-row {
         justify-content: right;
         padding: 1rem 0 0 1rem;
         display: flex;
@@ -330,7 +322,7 @@
 
 @media all and (min-width: 1200ps) {
 
-    .person_card {
+    .person__card--list {
         background-size: cover, contain;
         background-position: center, left bottom;
         background-image: linear-gradient(to right, rgba(77, 77, 75, 0) 1%, #939493 15%, #575757 50%, rgba(6, 6, 6, 0.4) 100%), var(--card-background);

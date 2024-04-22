@@ -1,19 +1,19 @@
 <template>
-  <div :class="{ person_card_grid: isGrid, person_card: !isGrid }"
+  <div :class="{ 'person__card--grid': isGrid, 'person__card--list': !isGrid }"
     :style="{ '--card-background': getPersonImage(person) }">
-    <div class="gauge_icon_container">
-      <div :class="{ gauge_icon_align: isGrid }"> 
-        <div :class="{ gauge_icon_positive: isPositiveOpinions, gauge_icon_negative: !isPositiveOpinions }">
-          <img v-if="isPositiveOpinions" src="../assets/img/thumbs-up.svg" />
-          <img v-else src="../assets/img/thumbs-down.svg" />
+    <div class="person__gauge-icon">
+      <div :class="{ 'person__gauge-icon--align': isGrid }"> 
+        <div :class="{'person__gauge-icon--positive': isPositiveOpinions, 'person__gauge-icon--negative': !isPositiveOpinions }">
+          <img v-if="isPositiveOpinions" src="../assets/img/thumbs-up.svg" alt="Thumb up"/>
+          <img v-else src="../assets/img/thumbs-down.svg" alt="Thumb down"/>
         </div>
       </div>
-      <div :class="{ person_container_grid: isGrid, person_container: !isGrid }">
-        <div class="person_content" :class="{ person_content_grid: isGrid }">
-          <p class="person_content_name" :class="{ person_content_name_card: isGrid }">
+      <div :class="{ 'person-container--grid': isGrid, 'person-container--list': !isGrid }">
+        <div class="person-content" :class="{ 'person-content--grid': isGrid }">
+          <p class="person-content__name" :class="{ 'person-content__name--card': isGrid }">
             {{ person.name }}
           </p>
-          <p class="person_content_desc">{{ person.description }}</p>
+          <p class="person-content__desc">{{ person.description }}</p>
         </div>
         <div>
           <VotingContainer :person="person" />
@@ -43,10 +43,6 @@ const props = defineProps({
 
 const isPositiveOpinions = computed(() => {
   return props.person.votes.positive > props.person.votes.negative
-})
-
-const gaugeIconImage = computed(() => {
-  return "../assets/img/thumbs-down.svg"
 })
 
 function getPersonImage(person) {
