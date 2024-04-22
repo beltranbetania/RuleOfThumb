@@ -1,6 +1,6 @@
 <template>
   <div :class="{ 'person__card--grid': isGrid, 'person__card--list': !isGrid }"
-    :style="{ '--card-background': getPersonImage(person) }">
+    :style="{ '--card-background': personImage }">
     <div class="person__gauge-icon">
       <div :class="{ 'person__gauge-icon--align': isGrid }"> 
         <div :class="{'person__gauge-icon--positive': isPositiveOpinions, 'person__gauge-icon--negative': !isPositiveOpinions }">
@@ -45,9 +45,8 @@ const isPositiveOpinions = computed(() => {
   return props.person.votes.positive > props.person.votes.negative
 })
 
-function getPersonImage(person) {
-  return 'url(' + person.picture + ')'
-}
-
+const personImage = computed(() => {
+  return 'url(' + props.person.picture + ')'
+})
 
 </script>
