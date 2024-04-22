@@ -26,6 +26,13 @@ npm install
 ```sh
 npm run dev
 ```
+
+### To run tests
+
+```sh
+yarn test
+```
+
 ### Lighthouse report 
 
 <img width="791" alt="Screenshot 2024-04-22 at 2 46 55 AM" src="https://github.com/beltranbetania/rule-of-thumb/assets/30360007/511d2a4a-c96b-456b-96da-1773c39668f8">
